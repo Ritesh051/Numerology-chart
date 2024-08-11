@@ -1,8 +1,9 @@
 const themeToggler = document.querySelector(".theme-toggler");
-var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-var planetName = ["Sun","Moon","Jupiter","Rahu","Mercury","Venus","Ketu","Saturn","Mars"];
-var dayNumberMap = { "Sunday": 1, "Munday": 2, "Thursday": 3, "Wednesday": 5, "Friday": 6, "Saturday": 8, "Tuesday": 9 };
+var days = [];
+var planetName = [];
+var dayNumberMap = {};
 var gridNumbers = [];
+
 themeToggler.addEventListener('click', () => {
     setTimeout(() => {
         document.body.classList.toggle('dark-theme-variables');
@@ -20,9 +21,23 @@ const populateGridNumbers = (num)=>{
         }
     });
 }
+const resetData =()=>{
+    days = [];
+    planetName = [];
+    dayNumberMap = {};
+    gridNumbers = [];
+    resetGrid();
+}
+const populateData = () => {
+    days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    planetName = ["Sun","Moon","Jupiter","Rahu","Mercury","Venus","Ketu","Saturn","Mars"];
+    dayNumberMap = { "Sunday": 1, "Munday": 2, "Thursday": 3, "Wednesday": 5, "Friday": 6, "Saturday": 8, "Tuesday": 9 };
+    gridNumbers = [];
+}
 function getDay(event) {
     event.preventDefault();
-    
+    resetData();
+    populateData();
     const inputDate = document.getElementById('date').value;
     
     const date = new Date(inputDate);
@@ -52,6 +67,13 @@ function getDay(event) {
     document.getElementById('array').textContent = gridNumbers;
     console.log(gridNumbers);
     setGridNumbers();
+}
+const resetGrid = () =>{
+    var grid = document.getElementById("grid").children;
+    for(let i = 0; i<grid.length; i++){
+        grid[i].classList.remove('grid-part-selected');
+        grid[i].textContent = grid[i].id;
+    }
 }
 const setGridNumbers = () => {
     let counts = {};
@@ -102,12 +124,14 @@ const getDestinyNumber = (dob)=>{
 const getMahaDasha = (basicNum,startYear)=>{
     const currYear = (new Date()).getFullYear();
     let mahaDasha = basicNum;
-    for(let i = startYear; i<=currYear; ){
+    for(let i = startYear; i<currYear; ){
         i+=mahaDasha;
-        mahaDasha++;
-        if(mahaDasha>9){
-            mahaDasha=1;
-        }        
+        if(i<currYear){
+            mahaDasha++;
+            if(mahaDasha>9){
+                mahaDasha=1;
+            }   
+        }     
     }
     return mahaDasha;
 }
