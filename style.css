@@ -340,4 +340,5 @@ body[data-theme='dark'] .theme-toggler span.active {
         padding-top: 20px; 
         color: var(--color-primary);
     }
+    
 }
