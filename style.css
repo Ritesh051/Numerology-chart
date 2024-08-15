@@ -52,10 +52,11 @@ body {
     color: var(--color-dark);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 #siteName {
     position: absolute;
     left: 20px;
-    top: 20px;  
+    top: 20px;
     margin: 0;
     color: var(--color-primary);
 }
@@ -92,7 +93,7 @@ body[data-theme='dark'] .form-background {
 
 body[data-theme='dark'] .form label {
     color: var(--color-background);
-    
+
 }
 
 .form input.name,
@@ -112,11 +113,13 @@ body[data-theme='dark'] .form label {
     padding: 0.5rem;
     color: var(--color-dark);
 }
-body[data-theme='dark'] .form input.name, 
+
+body[data-theme='dark'] .form input.name,
 body[data-theme='dark'] .form input#date {
     color: var(--color-light);
     background: var(--color-info-dark);
 }
+
 ::-webkit-calendar-picker-indicator {
     background-color: var(--color-info-light);
     border-radius: var(--border-radius-1);
@@ -126,27 +129,33 @@ ul li #dayOfweek {
     display: inline;
     color: var(--color-primary);
 }
-ul li #mahadasha{
+
+ul li #mahadasha {
     display: inline;
     color: var(--color-primary);
 }
-ul li #mahadashaPlanet{
+
+ul li #mahadashaPlanet {
     display: inline;
     color: var(--color-primary);
 }
-ul li #antardashaPlanet{
+
+ul li #antardashaPlanet {
     display: inline;
     color: var(--color-primary);
 }
-ul li #antardasha{
+
+ul li #antardasha {
     display: inline;
     color: var(--color-primary);
 }
+
 ul li #Destiny {
     display: inline;
     color: var(--color-primary);
 }
-ul li #base{
+
+ul li #base {
     display: inline;
     color: var(--color-primary);
 }
@@ -194,7 +203,6 @@ body[data-theme='dark'] .form .form-btn {
     align-items: center;
     justify-content: center;
     box-shadow: var(--box-shadow)
-
 }
 
 #numberOutput {
@@ -234,8 +242,9 @@ body[data-theme='dark'] .form .form-btn {
     border-radius: 10px;
     color: var(--color-info-light);
 }
+
 .grid-part-selected {
-    
+
     background-color: #7380ec;
     color: var(--color-info-light);
 }
@@ -268,7 +277,7 @@ body[data-theme='dark'] .form .form-btn {
 }
 
 
-body[data-theme='dark'] .data .heading h2 span{
+body[data-theme='dark'] .data .heading h2 span {
     color: var(--color-dark);
 }
 
@@ -331,14 +340,95 @@ body[data-theme='dark'] .theme-toggler span.active {
 }
 
 @media screen and (max-width: 480px) {
+
     #siteName {
         display: flex;
+        top: -15px;
         justify-content: center;
-        align-items: flex-start; 
+        align-items: center;
         text-align: center;
         width: 100%;
-        padding-top: 20px; 
+        margin: 20px 0;
         color: var(--color-primary);
+    }
+    .form-background {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--color-white);
+        padding: 20px;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        width: 80%;
+        margin: 2rem  0 -3rem;
+    }
+
+    .form-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .form input.name,
+    .form input#date,
+    .form .form-btn {
+        width: 80%;
+        height: 40px;
+        border-radius: var(--border-radius-1);
+        padding: 0.5rem;
+    }
+    .number-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 7rem;
+    }
+
+    #array {
+        width: 24rem;
+        height: 3rem;
+        border-radius: 20px;
+        padding: 0.7rem;
+        background-color: var(--color-white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: var(--box-shadow);
+        margin: 0 auto 1rem auto;
+    }
+
+    .output-container {
+        display: flex;
+        align-items: center;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    #grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        width: 10rem;
+        margin-top: 14rem;
+        margin-left: 10rem;
+    }
+    .data{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--color-white);
+        border-radius: var(--border-radius);
+        padding: 20px;
+        box-shadow: var(--box-shadow);
+        width: 24rem;
+        margin: -1rem -9rem -51rem;
     }
     
 }

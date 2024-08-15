@@ -20,12 +20,12 @@
     </div>
     <div class="form-background">
         <div class="form-container">
-            <form action="" class="form">
+            <form action="" class="form" onsubmit="getDay(event)">
                 <label for="Name">NAME :</label>
-                <input type="text" class="name" placeholder="Your Name">
+                <input type="text" class="name" id="name" placeholder="Your Name">
                 <label for="Date">DATE :</label>
                 <input type="date" id="date">
-                <input type="submit" name="Submit" value="Submit" class="form-btn" onclick="getDay(event)">
+                <input type="submit" name="Submit" value="Submit" class="form-btn">
             </form>
         </div>
     </div>
@@ -50,21 +50,11 @@
                 <h2>Your <span>Data</span></h2>
             </div>
             <ul>
-                <li>Day :-
-                    <p id="dayOfweek"></p>
-                </li>
-                <li>Basic No. :-
-                    <p id="base"></p>
-                </li>
-                <li>Destiny No. :-
-                    <p id="Destiny"></p>
-                </li>
-                <li>Mahadasha :- 
-                    <p id="mahadasha"></p>
-                </li>
-                <li>Antardasha :- 
-                    <p id="antardasha"></p>
-                </li>
+                <li>Day: <p id="dayOfweek"></p></li>
+                <li>Basic No.: <p id="base"></p></li>
+                <li>Destiny No.: <p id="Destiny"></p></li>
+                <li>Mahadasha: <p id="mahadasha"></p></li>
+                <li>Antardasha: <p id="antardasha"></p></li>
             </ul>
         </div>
     </div>
