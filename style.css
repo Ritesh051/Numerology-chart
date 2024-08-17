@@ -286,6 +286,7 @@ body[data-theme='dark'] .form .form-btn {
     color: var(--color-info-light);
 }
 
+
 .data {
     display: flex;
     flex-direction: column;
