@@ -11,6 +11,8 @@
     --color-primary-variant: #111e88;
     --color-dark-variant: #677483;
     --color-background: #f6f6f9;
+    --color-green:#008000;
+    --color-red:red;
 
     --border-radius: 2rem;
     --border-radius-1: 0.4rem;
@@ -55,19 +57,54 @@ body {
 }
 
 #siteName {
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    margin: 0;
+    position: relative;
+    z-index: 2;
+    margin-left: 22px;
+    top: 3px;
     color: var(--color-primary);
     font-size: 2.2rem;
 }
 
+.logo {
+    position: relative;
+    margin-right: 76rem;
+    top: -1rem;
+}
+
+.logo>img {
+    width: 4rem;
+    mix-blend-mode: multiply;
+    position: absolute;
+    top: 0;
+    left: 2px;
+    z-index: 1;
+    animation: rotate 8s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+      --background: #2b2b2b;
+      --color: white;
+    }
+  }
+
+
+
 .form-background {
     background-color: var(--color-white);
-    padding: 20px;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
+    padding: 20px;
     margin-bottom: 30vh;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -130,11 +167,12 @@ body[data-theme='dark'] .form input#date {
 ul li #dayOfweek {
     display: inline;
     color: var(--color-primary);
+
 }
 
 ul li #mahadasha {
     display: inline;
-    color: var(--color-primary);
+    color: var(--color-red);
 }
 
 ul li #mahadashaPlanet {
@@ -149,7 +187,7 @@ ul li #antardashaPlanet {
 
 ul li #antardasha {
     display: inline;
-    color: var(--color-primary);
+    color: var(--color-green);
 }
 
 ul li #Destiny {
@@ -240,13 +278,6 @@ body[data-theme='dark'] .form .form-btn {
     transition: background-color 50ms ease, border-radius 50ms ease;
     transition-delay: 50ms;
 
-}
-
-.grid-part:hover {
-    cursor: pointer;
-    background-color: #7380ec;
-    border-radius: 10px;
-    color: var(--color-info-light);
 }
 
 .grid-part-selected {
@@ -357,6 +388,7 @@ body[data-theme='dark'] .theme-toggler span.active {
         margin: 20px 0;
         color: var(--color-primary);
     }
+
     .form-background {
         display: flex;
         flex-direction: column;
@@ -367,7 +399,7 @@ body[data-theme='dark'] .theme-toggler span.active {
         border-radius: var(--border-radius);
         box-shadow: var(--box-shadow);
         width: 80%;
-        margin: 2rem  0 -3rem;
+        margin: 2rem 0 -3rem;
     }
 
     .form-container {
@@ -392,6 +424,7 @@ body[data-theme='dark'] .theme-toggler span.active {
         border-radius: var(--border-radius-1);
         padding: 0.5rem;
     }
+
     .number-container {
         display: flex;
         justify-content: center;
@@ -417,6 +450,7 @@ body[data-theme='dark'] .theme-toggler span.active {
         align-items: center;
         transition: background-color 0.3s ease, color 0.3s ease;
     }
+
     #grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -425,7 +459,8 @@ body[data-theme='dark'] .theme-toggler span.active {
         margin-top: 14rem;
         margin-left: 10rem;
     }
-    .data{
+
+    .data {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -436,5 +471,5 @@ body[data-theme='dark'] .theme-toggler span.active {
         width: 24rem;
         margin: -1rem -9rem -51rem;
     }
-    
+
 }
