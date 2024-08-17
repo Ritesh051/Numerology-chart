@@ -1,1 +1,1 @@
-# Numerology-chart
+# numerology-chart

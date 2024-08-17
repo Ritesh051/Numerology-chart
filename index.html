@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>NumeroVed</title>
+</head>
+
+<body>
+    <div class="logo">
+        <img class="image" src="/mandala.png" alt="">
+        <h2 id="siteName">NumeroVed</h2>
+    </div>
+    
+    <div class="theme-toggler">
+        <span class="material-symbols-outlined active">light_mode</span>
+        <span class="material-symbols-outlined">dark_mode</span>
+    </div>
+    <div class="form-background">
+        <div class="form-container">
+            <form action="" class="form" onsubmit="getDay(event)">
+                <label for="Name">NAME :</label>
+                <input type="text" class="name" id="name" placeholder="Your Name">
+                <label for="Date">DATE :</label>
+                <input type="date" id="date">
+                <input type="submit" name="Submit" value="Submit" class="form-btn">
+            </form>
+        </div>
+    </div>
+    <div class="number-container">
+        <h4 id="numberOutput">Numbers</h4>
+        <div id="array"></div>
+    </div>
+    <div class="output-container">
+        <div id="grid">
+            <div class="grid-part" id="3">3</div>
+            <div class="grid-part" id="1">1</div>
+            <div class="grid-part" id="9">9</div>
+            <div class="grid-part" id="6">6</div>
+            <div class="grid-part" id="7">7</div>
+            <div class="grid-part" id="5">5</div>
+            <div class="grid-part" id="2">2</div>
+            <div class="grid-part" id="8">8</div>
+            <div class="grid-part" id="4">4</div>
+        </div>
+        <div class="data">
+            <div class="heading">
+                <h2>Your <span>Data</span></h2>
+            </div>
+            <ul>
+                <li>Day: <p id="dayOfweek"></p>
+                </li>
+                <li>Basic No.: <p id="base"></p>
+                </li>
+                <li>Destiny No.: <p id="Destiny"></p>
+                </li>
+                <li>Mahadasha: <p id="mahadasha"></p>
+                </li>
+                <li>Antardasha: <p id="antardasha"></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
